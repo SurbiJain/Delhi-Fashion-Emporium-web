@@ -14,21 +14,23 @@ const Services = () => {
   ];
   return (
     <div className="services">
-      <div className="container1 flex  lg:min-w-96 lg:p-[140px_15px_140px_15px] lg:mx-[102px] max-sm:mx-4  max-sm:py-4">
-        <div className=" container2 flex  flex-wrap gap-[25px] max-sm:gap-4 mt-[50px] ">
+      <div className="container1 flex   lg:min-w-96 lg:p-[140px_15px_140px_15px] lg:mx-[102px] max-sm:mx-4  max-sm:py-4">
+        <div className="container2 flex  flex-wrap gap-[25px] max-sm:gap-4 mt-[50px]">
           {images.map((object, i) => {
             return (
               <div
-                class={` bg-white border  w-[47%] border-gray-200 rounded-lg shadow max-sm:odd:m-0 max-sm:w-full odd:mt-[-30px] odd:mb-[30px] relative`}
+              key={i}
+                className={` bg-white border  w-[47%] border-gray-200 rounded-lg shadow max-sm:odd:m-0 max-sm:w-full odd:mt-[-30px] odd:mb-[30px] relative`}
               >
                 <img
-                  class="rounded-t-lg h-[70%] w-full"
+                  className="rounded-t-lg h-[70%] w-full"
                   src={object.src}
                   alt=""
+                  
                 />
                 <a
                   href="#"
-                  class="text-white flex
+                  className="text-white flex
   justify-center items-center
     absolute w-full h-full top-0 left-0 bg-black opacity-0 z-10 transition-opacity duration-300 hover:opacity-70 "
                 >
@@ -37,7 +39,7 @@ const Services = () => {
 
                 <div>
                   <a href="#">
-                    <h5 class="text-xl font-semibold py-5  text-gray-900 text-center">
+                    <h5 className="text-xl font-semibold py-5  text-gray-900 text-center" >
                       {object.title}
                     </h5>
                   </a>
@@ -46,7 +48,7 @@ const Services = () => {
             );
           })}
         </div>
-        <div className="flex flex-col flex-wrap mt-[50px] h-full ">
+        <div className="flex flex-col ml-20  flex-wrap mt-[50px] h-full ">
           <h2 className="heading1">My Services</h2>
           <p className="text-2xl font-medium mb-4 description">
             I would like to give you a unique photography experience, capture

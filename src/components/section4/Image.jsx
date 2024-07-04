@@ -29,10 +29,10 @@ const Image = () => {
   ];
   return (
   
-  <div class="columns-3 gap-7 column-ga max-sm:columns-1">
-    {image.map((img)=>{
+  <div className="columns-3 gap-7 column-ga max-sm:columns-1">
+    {image.map((img,i)=>{
      return(
-      <figure>
+      <figure key={i}>
       <img src={img.src} alt="A windmill" className="rounded-lg hover:rounded-lg" />
       <figcaption ><a className="text-white flex
   justify-center items-center

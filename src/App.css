@@ -30,75 +30,75 @@ body {
 }
 
 .navbar {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  color: #343f52;
-  z-index: 1020;
-  max-width: 1140px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 0 auto;
+  z-index: 50;
   font-weight: 700;
   border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+ 
 }
+
+ 
 
 .navbar::-webkit-scrollbar {
   margin: 0;
 }
-.navbar div li:hover {
+.nav-links ul, .navbar .social{
+  display: flex;
+  
+  
+}
+.nav-links li:hover {
   color: orange;
 }
-.end-icon div:hover {
+.nav-links .end-icon:hover {
   color: orange;
 }
 
-.navbar li {
+.nav-links li{
+  padding: 1rem;
+}
+
+.nav-links li{
   padding: 23px 20px;
 }
-
-@media screen and (max-width: 992px) {
-  body {
-    overflow-x: hidden !important;
+.toggle-button{
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
 }
-  .navbar {
-    flex-direction: row;
-   
-  }
 
-  .logo {
-    margin-left: 5px;
-    width: fit-content;
-    
-  }
-
-  .nav .options,
-  .nav .social {
-    display: none;
-  }
-  .nav {
-    background-color: transparent;
-  }
-  .services .container1, .services .container2{
-    flex-direction: column;
-
-  }
-  .box{
-    margin:0;
-  }
-  .miniNav .options{
-    flex-direction: column;
-  }
-  figure{
-   
-    grid-template-columns: 1fr;
-    margin-bottom: 15px;
-  }
-  .container{
-    column-count: 1;
-   
-  }
+.toggle-button .bar{
+  height: 3px;
+  width: 100%;
+  background-color: black;
 }
+
+
+/* .offcanvas-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(30, 34, 40, .7);} */
+
+
+  /* .offcanvas-backdrop.show {
+    opacity: 1;}
+
+    .fade {
+      transition: opacity .15s linear;
+  } */
+
+
+
+
 
 .social div {
   width: 20px;
@@ -108,21 +108,18 @@ body {
   width: 100%;
   height: 100%;
 }
-.section1 {
-  position: relative;
-  height: 100%;
-  z-index: 10 !important;
-}
+
 
 .swiper {
   width: 100%;
   height: 100%;
 }
 
+
 .swiper-slide img {
   display: block;
   width: 100%;
-  height: 90%;
+  height: 100%;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -253,4 +250,77 @@ figure a {
   display: block;
   position: absolute;
 }
+@media screen and (max-width: 992px) {  
+   .nav{
+    flex-direction: row;
+   }
+   .navbar{
+    flex-direction: row;
+    align-items: flex-start;
+   }
 
+   .nav-links{
+    display: none;
+   }
+   
+  
+  .nav-links ul{
+    width: 100%;
+    flex-direction: column;
+    
+  }
+  .nav-links li{
+      padding: 0.5rem 1rem;
+  }
+ 
+  
+  .nav-links.active{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(30, 34, 40);
+    color: white; 
+    height: 100dvh;  
+    position: fixed;
+    left: 0;
+    top: 0;
+  width: 75vw; 
+  ul{
+   margin-left: 20px;
+   margin-top: 150px;
+  }
+  li{
+    margin-bottom: 10px;
+  }
+  .social{
+    display: none;
+  }
+  } 
+  
+  
+  .toggle-button{
+    display: flex;
+    z-index: 100;
+  }
+
+  .services .container1, .services .container2{
+    flex-direction: column;
+
+  }
+  .box{
+    padding: 140px 15px 140px 15px ;
+    margin-left: 110px;
+    margin-right: 110px;
+  }
+  .miniNav .nav-links{
+    flex-direction: column;
+  }
+  figure{
+   
+    grid-template-columns: 1fr;
+    margin-bottom: 15px;
+  }
+  .container{
+    column-count: 1;
+   
+  }
+}

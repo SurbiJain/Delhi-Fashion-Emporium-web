@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import img1 from "../images/section1/image1.jpeg";
 import img2 from "../images/section1/image2.jpeg";
 import img3 from "../images/section1/image3.jpeg";
@@ -10,12 +10,29 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 
 const ImageSlider = () => {
+  const [width, setWidth] = useState()
   let images = [img1, img2, img3, img4, img5];
+  const getWidth = (e) => {
+    const width = e.target.getBoundingClientRect().width;
+
+   setWidth( width
+    );
+  
+}
+let height;
+useEffect(()=>{
+   height = width*0.67 
+   
+}, [width])
+// console.log(width)
+
+// console.log(height)
+
 
   return (
-    <div className=" pt-6  h-[670px] max-sm:mx-4">
+    <div   className=" mt-8 max-sm:mx-4"  >
     <Swiper
-        slidesPerView={'auto'}
+        slidesPerView={3}
         centeredSlides={true}
         spaceBetween={30}
         pagination={{
@@ -27,10 +44,10 @@ const ImageSlider = () => {
       className="mySwiper max-sm:rounded-xl"
     >
       
-      {images.map((image)=>{
-        return <SwiperSlide >
+      {images.map((image,i)=>{
+        return <SwiperSlide key={i} style={{minHeight: height}}>
   
-        <img src={image} className="swiper-img"  />
+        <img onLoad={getWidth}  src={image} className="swiper-img "  />
 
       </SwiperSlide>
       })}

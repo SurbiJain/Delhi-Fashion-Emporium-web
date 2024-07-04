@@ -15,9 +15,9 @@ const Section8 = () => {
         <form className="m-10">
           <div className="flex max-sm:flex-col gap-5 mb-4 ">
             <input className="p-2 rounded-lg flex-1"  type="text" placeholder="Name" required />
-            <input  className="p-2 rounded-lg" type="text" placeholder="Email" required />
+            <input  className="p-2 rounded-lg flex-1" type="text" placeholder="Email" required />
           </div>
-          <input  className="p-2 rounded-lg h-32 w-full mb-4" type="text" placeholder="message" required />
+          <textarea  className="p-2 rounded-lg w-full mb-4" type="text" placeholder="Message" required />
           <Button title="Send message" type="submit"/>
         </form>
       </div>

@@ -5,8 +5,8 @@ import Section7 from "../section7";
 
 const Section6 = () => {
   return (
-    <div className="section6 lg:mx-[102px] lg:p-[140px_15px_140px_15px] max-sm:my-10 max-sm:mx-4 flex justify-between max-sm:flex-col-reverse">
-      <div className="content flex flex-col gap-4 max-sm:mt-10">
+    <div className="section6  p-[140px_15px_140px] lg:mx-44 max-sm:my-10 max-sm:mx-4 flex justify-between max-sm:flex-col-reverse">
+      <div className="content flex flex-col gap-4 max-sm:mt-10 lg:w-1/2">
         <h2 className="text-4xl text-gray-heading1"> About Me </h2>
         <div className="text-xl text-gray-description">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
@@ -28,7 +28,7 @@ const Section6 = () => {
         </div>
         <Button title="Learn more" />
       </div>
-      <div className="lg:w-[590px] masked lg:mt-8 lg:px-9 flex-[0_0_auto]">
+      <div className="lg:w-[590px] masked lg:mt-8 lg:px-9 flex-1">
         <img src={img} />
       </div>
     </div>
