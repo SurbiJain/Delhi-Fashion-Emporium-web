@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import logo from "./../images/logo/DelhiFashionEmporium_Logo 2.webp";
-import phone from "./../images/social/call_24dp_000000_FILL0_wght400_GRAD0_opsz24.png";
-import location from "./../images/social/location_on_24dp_000000_FILL0_wght400_GRAD0_opsz24.png";
+import phone from "./../images/social/call.svg";
+import location from "./../images/social/map.svg";
 
 const NewNav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -56,7 +56,7 @@ const NewNav = () => {
         </div>
         <div className="search flex  end-icon
         lg:ml-auto">
-           <a href="https://www.google.com/maps/place/Delhi+Fashion+Emporium/@28.5088812,77.2298318,17z/data=!3m1!4b1!4m6!3m5!1s0x390ce1a26683f1bd:0x7f1be3da35ac795b!8m2!3d28.5088812!4d77.2324067!16s%2Fg%2F1jkz5mcl9?entry=ttu" className="hover:translate-y-1 w-6 h-6" target="_blank" >
+           <a href="https://maps.app.goo.gl/q1ipoQ1mkapnvkPo9" className="hover:translate-y-1 w-6 h-6" target="_blank" >
               <img src={location} />
             </a>
             

@@ -48,7 +48,7 @@ const Services = () => {
             );
           })}
         </div>
-        <div className="flex flex-col ml-20  flex-wrap mt-[50px] h-full ">
+        <div className="flex flex-col sm:ml-20  flex-wrap mt-[50px] h-full ">
           <h2 className="heading1">My Services</h2>
           <p className="text-2xl font-medium mb-4 description">
             I would like to give you a unique photography experience, capture
