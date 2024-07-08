@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import logo from "./../images/logo/DelhiFashionEmporium_Logo 2.webp";
-import fb from "./../images/social/facebook.png";
-import ig from "./../images/social/instagram.png";
-import twitter from "./../images/social/twitter.png";
+import phone from "./../images/social/call_24dp_000000_FILL0_wght400_GRAD0_opsz24.png";
+import location from "./../images/social/location_on_24dp_000000_FILL0_wght400_GRAD0_opsz24.png";
 
 const NewNav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -41,21 +40,10 @@ const NewNav = () => {
   </div>}
       <div className={`navbar lg:bg-white lg:w-full px-8 lg:h-24 ${width < 992 ? null : stickyClass}`}>
         <div
-          className={`nav-links items-center  flex flex-1  ${
+          className={`nav-links  ${
             menuOpen ? "active" : null
           }`}
         >
-          <div className="flex  text-white gap-3 social">
-            {<div className="hover:translate-y-1">
-              <img src={twitter} />
-            </div>}
-            <div className="hover:translate-y-1">
-              <img src={fb} />
-            </div>
-            <div className="hover:translate-y-1">
-              <img src={ig} />
-            </div>
-          </div>
           <ul >
             <li>Home</li>
             <li>Services</li>
@@ -68,8 +56,13 @@ const NewNav = () => {
         </div>
         <div className="search flex  end-icon
         lg:ml-auto">
-            <span className="material-symbols-outlined ">error</span>
-            <span className="material-symbols-outlined  ml-3">search</span>
+           <a href="https://www.google.com/maps/place/Delhi+Fashion+Emporium/@28.5088812,77.2298318,17z/data=!3m1!4b1!4m6!3m5!1s0x390ce1a26683f1bd:0x7f1be3da35ac795b!8m2!3d28.5088812!4d77.2324067!16s%2Fg%2F1jkz5mcl9?entry=ttu" className="hover:translate-y-1 w-6 h-6" target="_blank" >
+              <img src={location} />
+            </a>
+            
+            <a href="tel:9818301054" target="_blank" className="hover:translate-y-1 w-6 h-6 ml-2">
+              <img src={phone} />
+            </a>
         </div>
         <a href="#" className="toggle-button ml-3" onClick={handleToggle}>
           <span className="bar"></span>
